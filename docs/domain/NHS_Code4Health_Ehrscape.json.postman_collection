@@ -452,7 +452,7 @@
 		},
 		{
 			"id": "316d3c50-d7f9-f395-a370-1d2344018672",
-			"headers": "Accept: text/plain, */*; q=0.01\nOrigin: https://dev.ehrscape.com\nAuthorization: {{Authorization}}\nContent-Type: text/plain\nReferer: https://dev.ehrscape.com/api-explorer.html\n",
+			"headers": "Authorization: {{Authorization}}\n",
 			"url": "https://ehrscape.code-4-health.org/rest/v1/demographics/party/query/?lastNames=*cox*",
 			"preRequestScript": "",
 			"pathVariables": {},
@@ -463,7 +463,7 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1448906554728,
+			"time": 1448910903867,
 			"name": "Query Demographics for matching Party",
 			"description": "",
 			"collectionId": "9b3ad1e8-cc64-64b7-88dd-58ab01219a93"
@@ -510,7 +510,7 @@
 		},
 		{
 			"id": "3fd9e49d-3b06-3f79-6c3b-b4d0af26d812",
-			"headers": "//Content-Type: text/plain\nAuthorization: Basic aGFuZGlfYzRoOlBBc3RvTWV0\n",
+			"headers": "Content-Type: application/json\nAuthorization: {{Authorization}}\n",
 			"url": "https://ehrscape.code-4-health.org/rest/v1/ehr/?subjectId={{subjectId}}&subjectNamespace={{subjectNamespace}}",
 			"preRequestScript": "",
 			"pathVariables": {},
@@ -519,15 +519,9 @@
 			"dataMode": "params",
 			"version": 2,
 			"tests": "",
-			"currentHelper": "basicAuth",
-			"helperAttributes": {
-				"username": "{{Username}}",
-				"password": "{{Password}}",
-				"saveToRequest": true,
-				"id": "basic",
-				"timestamp": 1448825394381
-			},
-			"time": 1448906257772,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1448911653424,
 			"name": "Get ehrStatus from subjectId",
 			"description": "",
 			"collectionId": "9b3ad1e8-cc64-64b7-88dd-58ab01219a93"
