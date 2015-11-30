@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>829f4a0f-f681-43c3-a6a4-03bdc5306f0e</id>
+  <name>Medication action</name>
+  <definition xsi:type="ACTION" archetype_id="openEHR-EHR-ACTION.medication.v1" concept_name="Medication action">
+    <Rule path="/protocol[at0030]/items[at0031]" max="0" />
+    <Rule path="/protocol[at0030]/items[at0037]" max="0" />
+    <Rule path="/protocol[at0030]/items[at0032]" max="0" />
+    <Rule path="/protocol[at0030]/items[at0038]" max="0" />
+    <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.chemical_description_mnd.v1" concept_name="Chemical description of medication" max="1" path="/description[at0017]/items[at0023]" name="Ingredients and form">
+      <Rule path="/items[at0001]/items[at0003]" max="0" />
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_amount.v1" concept_name="Medication amount" max="1" path="/items[at0030]" name="Medication strength">
+        <Rule path="/items[at0001]" name="Strength">
+          <constraint xsi:type="multipleConstraint">
+            <includedTypes>Quantity (Qualified real)</includedTypes>
+          </constraint>
+        </Rule>
+        <Rule path="/items[at0008]/items[at0001]">
+          <constraint xsi:type="multipleConstraint">
+            <includedTypes>Quantity (Qualified real)</includedTypes>
+          </constraint>
+        </Rule>
+        <Rule path="/items[at0007]/items[at0001]">
+          <constraint xsi:type="multipleConstraint">
+            <includedTypes>Quantity (Qualified real)</includedTypes>
+          </constraint>
+        </Rule>
+      </Items>
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_amount.v1" concept_name="Medication amount" max="1" path="/items[at0001]/items[at0033]" name="Ingredient strength">
+        <Rule path="/items[at0001]" name="Strength">
+          <constraint xsi:type="multipleConstraint">
+            <includedTypes>Quantity (Qualified real)</includedTypes>
+          </constraint>
+        </Rule>
+        <Rule path="/items[at0008]/items[at0001]">
+          <constraint xsi:type="multipleConstraint">
+            <includedTypes>Quantity (Qualified real)</includedTypes>
+          </constraint>
+        </Rule>
+        <Rule path="/items[at0007]/items[at0001]">
+          <constraint xsi:type="multipleConstraint">
+            <includedTypes>Quantity (Qualified real)</includedTypes>
+          </constraint>
+        </Rule>
+      </Items>
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_amount.v1" concept_name="Medication amount" max="1" path="/items[at0001]/items[at0024]" name="Ingredient quantity">
+        <Rule path="/items[at0001]" name="Quantity">
+          <constraint xsi:type="multipleConstraint">
+            <includedTypes>Quantity (Qualified real)</includedTypes>
+          </constraint>
+        </Rule>
+        <Rule path="/items[at0008]/items[at0001]">
+          <constraint xsi:type="multipleConstraint">
+            <includedTypes>Quantity (Qualified real)</includedTypes>
+          </constraint>
+        </Rule>
+        <Rule path="/items[at0007]/items[at0001]">
+          <constraint xsi:type="multipleConstraint">
+            <includedTypes>Quantity (Qualified real)</includedTypes>
+          </constraint>
+        </Rule>
+      </Items>
+    </Items>
+    <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_amount.v1" concept_name="Medication amount" max="1" path="/description[at0017]/items[at0022]" name="Structured dose">
+      <Rule path="/items[at0001]" name="Quantity">
+        <constraint xsi:type="multipleConstraint">
+          <includedTypes>Quantity (Qualified real)</includedTypes>
+        </constraint>
+      </Rule>
+    </Items>
+    <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_admin.v1" concept_name="Medication administration" max="1" path="/description[at0017]/items[at0027]" name="Administration details">
+      <Rule path="/items[at0001]" max="1" />
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.infusion_details.v1" concept_name="Infusion Administration Details" path="/items[at0005]" />
+    </Items>
+  </definition>
+</template>

@@ -1,0 +1,447 @@
+    <composition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns2="http://schemas.openehr.org/v1" xsi:type="ns2:COMPOSITION" archetype_node_id="openEHR-EHR-COMPOSITION.problem_list.v1">
+        <ns2:name>
+            <ns2:value>Problem list</ns2:value>
+        </ns2:name>
+        <ns2:uid xsi:type="ns2:OBJECT_VERSION_ID">
+            <ns2:value>55d73209-98c2-4505-b298-b52bc8c2aadc::prov_test.c4h.com::1</ns2:value>
+        </ns2:uid>
+        <ns2:archetype_details>
+            <ns2:archetype_id>
+                <ns2:value>openEHR-EHR-COMPOSITION.problem_list.v1</ns2:value>
+            </ns2:archetype_id>
+            <ns2:template_id>
+                <ns2:value>IDCR Problem List.v1</ns2:value>
+            </ns2:template_id>
+            <ns2:rm_version>1.0.1</ns2:rm_version>
+        </ns2:archetype_details>
+        <ns2:language>
+            <ns2:terminology_id>
+                <ns2:value>ISO_639-1</ns2:value>
+            </ns2:terminology_id>
+            <ns2:code_string>en</ns2:code_string>
+        </ns2:language>
+        <ns2:territory>
+            <ns2:terminology_id>
+                <ns2:value>ISO_3166-1</ns2:value>
+            </ns2:terminology_id>
+            <ns2:code_string>GB</ns2:code_string>
+        </ns2:territory>
+        <ns2:category>
+            <ns2:value>event</ns2:value>
+            <ns2:defining_code>
+                <ns2:terminology_id>
+                    <ns2:value>openehr</ns2:value>
+                </ns2:terminology_id>
+                <ns2:code_string>433</ns2:code_string>
+            </ns2:defining_code>
+        </ns2:category>
+        <ns2:composer xsi:type="ns2:PARTY_IDENTIFIED">
+            <ns2:external_ref>
+                <ns2:id xsi:type="ns2:GENERIC_ID">
+                    <ns2:value>G33567</ns2:value>
+                    <ns2:scheme>2.16.840.1.113883.2.1.4.3</ns2:scheme>
+                </ns2:id>
+                <ns2:namespace>NHS-UK</ns2:namespace>
+                <ns2:type>PERSON</ns2:type>
+            </ns2:external_ref>
+            <ns2:name>Dr Tony Shannon</ns2:name>
+        </ns2:composer>
+        <ns2:context>
+            <ns2:start_time>
+                <ns2:value>2015-10-22T00:11:02.518+02:00</ns2:value>
+            </ns2:start_time>
+            <ns2:setting>
+                <ns2:value>other care</ns2:value>
+                <ns2:defining_code>
+                    <ns2:terminology_id>
+                        <ns2:value>openehr</ns2:value>
+                    </ns2:terminology_id>
+                    <ns2:code_string>238</ns2:code_string>
+                </ns2:defining_code>
+            </ns2:setting>
+            <ns2:health_care_facility>
+                <ns2:external_ref>
+                    <ns2:id xsi:type="ns2:GENERIC_ID">
+                        <ns2:value>999999-345</ns2:value>
+                        <ns2:scheme>2.16.840.1.113883.2.1.4.3</ns2:scheme>
+                    </ns2:id>
+                    <ns2:namespace>NHS-UK</ns2:namespace>
+                    <ns2:type>PARTY</ns2:type>
+                </ns2:external_ref>
+                <ns2:name>Ripple Valley Hospital NHS</ns2:name>
+            </ns2:health_care_facility>
+        </ns2:context>
+        <ns2:content xsi:type="ns2:SECTION" archetype_node_id="openEHR-EHR-SECTION.problems_issues_rcp.v1">
+            <ns2:name>
+                <ns2:value>Problems and issues</ns2:value>
+            </ns2:name>
+            <ns2:archetype_details>
+                <ns2:archetype_id>
+                    <ns2:value>openEHR-EHR-SECTION.problems_issues_rcp.v1</ns2:value>
+                </ns2:archetype_id>
+                <ns2:rm_version>1.0.1</ns2:rm_version>
+            </ns2:archetype_details>
+            <ns2:items xsi:type="ns2:EVALUATION" archetype_node_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1">
+                <ns2:name>
+                    <ns2:value>Problem/Diagnosis</ns2:value>
+                </ns2:name>
+                <ns2:archetype_details>
+                    <ns2:archetype_id>
+                        <ns2:value>openEHR-EHR-EVALUATION.problem_diagnosis.v1</ns2:value>
+                    </ns2:archetype_id>
+                    <ns2:rm_version>1.0.1</ns2:rm_version>
+                </ns2:archetype_details>
+                <ns2:language>
+                    <ns2:terminology_id>
+                        <ns2:value>ISO_639-1</ns2:value>
+                    </ns2:terminology_id>
+                    <ns2:code_string>en</ns2:code_string>
+                </ns2:language>
+                <ns2:encoding>
+                    <ns2:terminology_id>
+                        <ns2:value>IANA_character-sets</ns2:value>
+                    </ns2:terminology_id>
+                    <ns2:code_string>UTF-8</ns2:code_string>
+                </ns2:encoding>
+                <ns2:subject xsi:type="ns2:PARTY_SELF"/>
+                <ns2:data xsi:type="ns2:ITEM_TREE" archetype_node_id="at0001">
+                    <ns2:name>
+                        <ns2:value>structure</ns2:value>
+                    </ns2:name>
+                    <ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0002">
+                        <ns2:name>
+                            <ns2:value>Problem/Diagnosis name</ns2:value>
+                        </ns2:name>
+                        <ns2:value xsi:type="ns2:DV_TEXT">
+                            <ns2:value>Hay fever</ns2:value>
+                        </ns2:value>
+                    </ns2:items>
+                    <ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0009">
+                        <ns2:name>
+                            <ns2:value>Clinical description</ns2:value>
+                        </ns2:name>
+                        <ns2:value xsi:type="ns2:DV_TEXT">
+                            <ns2:value>only in summer</ns2:value>
+                        </ns2:value>
+                    </ns2:items>
+                    <ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0077">
+                        <ns2:name>
+                            <ns2:value>Date/time of onset</ns2:value>
+                        </ns2:name>
+                        <ns2:value xsi:type="ns2:DV_DATE_TIME">
+                            <ns2:value>1995-01-22T16:00:00.000Z</ns2:value>
+                        </ns2:value>
+                    </ns2:items>
+                </ns2:data>
+            </ns2:items>
+            <ns2:items xsi:type="ns2:EVALUATION" archetype_node_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1">
+                <ns2:name>
+                    <ns2:value>Problem/Diagnosis #2</ns2:value>
+                </ns2:name>
+                <ns2:archetype_details>
+                    <ns2:archetype_id>
+                        <ns2:value>openEHR-EHR-EVALUATION.problem_diagnosis.v1</ns2:value>
+                    </ns2:archetype_id>
+                    <ns2:rm_version>1.0.1</ns2:rm_version>
+                </ns2:archetype_details>
+                <ns2:language>
+                    <ns2:terminology_id>
+                        <ns2:value>ISO_639-1</ns2:value>
+                    </ns2:terminology_id>
+                    <ns2:code_string>en</ns2:code_string>
+                </ns2:language>
+                <ns2:encoding>
+                    <ns2:terminology_id>
+                        <ns2:value>IANA_character-sets</ns2:value>
+                    </ns2:terminology_id>
+                    <ns2:code_string>UTF-8</ns2:code_string>
+                </ns2:encoding>
+                <ns2:subject xsi:type="ns2:PARTY_SELF"/>
+                <ns2:data xsi:type="ns2:ITEM_TREE" archetype_node_id="at0001">
+                    <ns2:name>
+                        <ns2:value>structure</ns2:value>
+                    </ns2:name>
+                    <ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0002">
+                        <ns2:name>
+                            <ns2:value>Problem/Diagnosis name</ns2:value>
+                        </ns2:name>
+                        <ns2:value xsi:type="ns2:DV_CODED_TEXT">
+                            <ns2:value>angina pectoris</ns2:value>
+                            <ns2:defining_code>
+                                <ns2:terminology_id>
+                                    <ns2:value>SNOMED-CT</ns2:value>
+                                </ns2:terminology_id>
+                                <ns2:code_string>299757012</ns2:code_string>
+                            </ns2:defining_code>
+                        </ns2:value>
+                    </ns2:items>
+                    <ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0077">
+                        <ns2:name>
+                            <ns2:value>Date/time of onset</ns2:value>
+                        </ns2:name>
+                        <ns2:value xsi:type="ns2:DV_DATE_TIME">
+                            <ns2:value>2000-07-17T12:30:37.553Z</ns2:value>
+                        </ns2:value>
+                    </ns2:items>
+                    <ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0003">
+                        <ns2:name>
+                            <ns2:value>Date/time clinically recognised</ns2:value>
+                        </ns2:name>
+                        <ns2:value xsi:type="ns2:DV_DATE_TIME">
+                            <ns2:value>2000-07-17T00:00:00.000Z</ns2:value>
+                        </ns2:value>
+                    </ns2:items>
+                    <ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0073">
+                        <ns2:name>
+                            <ns2:value>Diagnostic certainty</ns2:value>
+                        </ns2:name>
+                        <ns2:value xsi:type="ns2:DV_CODED_TEXT">
+                            <ns2:value>Suspected</ns2:value>
+                            <ns2:defining_code>
+                                <ns2:terminology_id>
+                                    <ns2:value>local</ns2:value>
+                                </ns2:terminology_id>
+                                <ns2:code_string>at0074</ns2:code_string>
+                            </ns2:defining_code>
+                        </ns2:value>
+                    </ns2:items>
+                </ns2:data>
+            </ns2:items>
+            <ns2:items xsi:type="ns2:EVALUATION" archetype_node_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1">
+                <ns2:name>
+                    <ns2:value>Problem/Diagnosis #3</ns2:value>
+                </ns2:name>
+                <ns2:archetype_details>
+                    <ns2:archetype_id>
+                        <ns2:value>openEHR-EHR-EVALUATION.problem_diagnosis.v1</ns2:value>
+                    </ns2:archetype_id>
+                    <ns2:rm_version>1.0.1</ns2:rm_version>
+                </ns2:archetype_details>
+                <ns2:language>
+                    <ns2:terminology_id>
+                        <ns2:value>ISO_639-1</ns2:value>
+                    </ns2:terminology_id>
+                    <ns2:code_string>en</ns2:code_string>
+                </ns2:language>
+                <ns2:encoding>
+                    <ns2:terminology_id>
+                        <ns2:value>IANA_character-sets</ns2:value>
+                    </ns2:terminology_id>
+                    <ns2:code_string>UTF-8</ns2:code_string>
+                </ns2:encoding>
+                <ns2:subject xsi:type="ns2:PARTY_SELF"/>
+                <ns2:data xsi:type="ns2:ITEM_TREE" archetype_node_id="at0001">
+                    <ns2:name>
+                        <ns2:value>structure</ns2:value>
+                    </ns2:name>
+                    <ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0002">
+                        <ns2:name>
+                            <ns2:value>Problem/Diagnosis name</ns2:value>
+                        </ns2:name>
+                        <ns2:value xsi:type="ns2:DV_CODED_TEXT">
+                            <ns2:value>asthma</ns2:value>
+                            <ns2:defining_code>
+                                <ns2:terminology_id>
+                                    <ns2:value>SNOMED-CT</ns2:value>
+                                </ns2:terminology_id>
+                                <ns2:code_string>301485011</ns2:code_string>
+                            </ns2:defining_code>
+                        </ns2:value>
+                    </ns2:items>
+                    <ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0077">
+                        <ns2:name>
+                            <ns2:value>Date/time of onset</ns2:value>
+                        </ns2:name>
+                        <ns2:value xsi:type="ns2:DV_DATE_TIME">
+                            <ns2:value>1984-07-17T12:30:37.553Z</ns2:value>
+                        </ns2:value>
+                    </ns2:items>
+                    <ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0003">
+                        <ns2:name>
+                            <ns2:value>Date/time clinically recognised</ns2:value>
+                        </ns2:name>
+                        <ns2:value xsi:type="ns2:DV_DATE_TIME">
+                            <ns2:value>1984-09-09T00:00:00.000Z</ns2:value>
+                        </ns2:value>
+                    </ns2:items>
+                </ns2:data>
+            </ns2:items>
+            <ns2:items xsi:type="ns2:EVALUATION" archetype_node_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1">
+                <ns2:name>
+                    <ns2:value>Problem/Diagnosis #4</ns2:value>
+                </ns2:name>
+                <ns2:archetype_details>
+                    <ns2:archetype_id>
+                        <ns2:value>openEHR-EHR-EVALUATION.problem_diagnosis.v1</ns2:value>
+                    </ns2:archetype_id>
+                    <ns2:rm_version>1.0.1</ns2:rm_version>
+                </ns2:archetype_details>
+                <ns2:language>
+                    <ns2:terminology_id>
+                        <ns2:value>ISO_639-1</ns2:value>
+                    </ns2:terminology_id>
+                    <ns2:code_string>en</ns2:code_string>
+                </ns2:language>
+                <ns2:encoding>
+                    <ns2:terminology_id>
+                        <ns2:value>IANA_character-sets</ns2:value>
+                    </ns2:terminology_id>
+                    <ns2:code_string>UTF-8</ns2:code_string>
+                </ns2:encoding>
+                <ns2:subject xsi:type="ns2:PARTY_SELF"/>
+                <ns2:data xsi:type="ns2:ITEM_TREE" archetype_node_id="at0001">
+                    <ns2:name>
+                        <ns2:value>structure</ns2:value>
+                    </ns2:name>
+                    <ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0002">
+                        <ns2:name>
+                            <ns2:value>Problem/Diagnosis name</ns2:value>
+                        </ns2:name>
+                        <ns2:value xsi:type="ns2:DV_CODED_TEXT">
+                            <ns2:value>eczema</ns2:value>
+                            <ns2:defining_code>
+                                <ns2:terminology_id>
+                                    <ns2:value>SNOMED-CT</ns2:value>
+                                </ns2:terminology_id>
+                                <ns2:code_string>71923017</ns2:code_string>
+                            </ns2:defining_code>
+                        </ns2:value>
+                    </ns2:items>
+                    <ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0077">
+                        <ns2:name>
+                            <ns2:value>Date/time of onset</ns2:value>
+                        </ns2:name>
+                        <ns2:value xsi:type="ns2:DV_DATE_TIME">
+                            <ns2:value>1985-03-22T12:30:37.553Z</ns2:value>
+                        </ns2:value>
+                    </ns2:items>
+                    <ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0003">
+                        <ns2:name>
+                            <ns2:value>Date/time clinically recognised</ns2:value>
+                        </ns2:name>
+                        <ns2:value xsi:type="ns2:DV_DATE_TIME">
+                            <ns2:value>1985-03-22T00:00:00.000Z</ns2:value>
+                        </ns2:value>
+                    </ns2:items>
+                </ns2:data>
+            </ns2:items>
+            <ns2:items xsi:type="ns2:EVALUATION" archetype_node_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1">
+                <ns2:name>
+                    <ns2:value>Problem/Diagnosis #5</ns2:value>
+                </ns2:name>
+                <ns2:archetype_details>
+                    <ns2:archetype_id>
+                        <ns2:value>openEHR-EHR-EVALUATION.problem_diagnosis.v1</ns2:value>
+                    </ns2:archetype_id>
+                    <ns2:rm_version>1.0.1</ns2:rm_version>
+                </ns2:archetype_details>
+                <ns2:language>
+                    <ns2:terminology_id>
+                        <ns2:value>ISO_639-1</ns2:value>
+                    </ns2:terminology_id>
+                    <ns2:code_string>en</ns2:code_string>
+                </ns2:language>
+                <ns2:encoding>
+                    <ns2:terminology_id>
+                        <ns2:value>IANA_character-sets</ns2:value>
+                    </ns2:terminology_id>
+                    <ns2:code_string>UTF-8</ns2:code_string>
+                </ns2:encoding>
+                <ns2:subject xsi:type="ns2:PARTY_SELF"/>
+                <ns2:data xsi:type="ns2:ITEM_TREE" archetype_node_id="at0001">
+                    <ns2:name>
+                        <ns2:value>structure</ns2:value>
+                    </ns2:name>
+                    <ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0002">
+                        <ns2:name>
+                            <ns2:value>Problem/Diagnosis name</ns2:value>
+                        </ns2:name>
+                        <ns2:value xsi:type="ns2:DV_CODED_TEXT">
+                            <ns2:value>homeless single person</ns2:value>
+                            <ns2:defining_code>
+                                <ns2:terminology_id>
+                                    <ns2:value>SNOMED-CT</ns2:value>
+                                </ns2:terminology_id>
+                                <ns2:code_string>250503019</ns2:code_string>
+                            </ns2:defining_code>
+                        </ns2:value>
+                    </ns2:items>
+                    <ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0077">
+                        <ns2:name>
+                            <ns2:value>Date/time of onset</ns2:value>
+                        </ns2:name>
+                        <ns2:value xsi:type="ns2:DV_DATE_TIME">
+                            <ns2:value>2014-07-24T12:30:37.553Z</ns2:value>
+                        </ns2:value>
+                    </ns2:items>
+                    <ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0003">
+                        <ns2:name>
+                            <ns2:value>Date/time clinically recognised</ns2:value>
+                        </ns2:name>
+                        <ns2:value xsi:type="ns2:DV_DATE_TIME">
+                            <ns2:value>2014-07-25T00:00:00.000Z</ns2:value>
+                        </ns2:value>
+                    </ns2:items>
+                </ns2:data>
+            </ns2:items>
+            <ns2:items xsi:type="ns2:EVALUATION" archetype_node_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1">
+                <ns2:name>
+                    <ns2:value>Problem/Diagnosis #6</ns2:value>
+                </ns2:name>
+                <ns2:archetype_details>
+                    <ns2:archetype_id>
+                        <ns2:value>openEHR-EHR-EVALUATION.problem_diagnosis.v1</ns2:value>
+                    </ns2:archetype_id>
+                    <ns2:rm_version>1.0.1</ns2:rm_version>
+                </ns2:archetype_details>
+                <ns2:language>
+                    <ns2:terminology_id>
+                        <ns2:value>ISO_639-1</ns2:value>
+                    </ns2:terminology_id>
+                    <ns2:code_string>en</ns2:code_string>
+                </ns2:language>
+                <ns2:encoding>
+                    <ns2:terminology_id>
+                        <ns2:value>IANA_character-sets</ns2:value>
+                    </ns2:terminology_id>
+                    <ns2:code_string>UTF-8</ns2:code_string>
+                </ns2:encoding>
+                <ns2:subject xsi:type="ns2:PARTY_SELF"/>
+                <ns2:data xsi:type="ns2:ITEM_TREE" archetype_node_id="at0001">
+                    <ns2:name>
+                        <ns2:value>structure</ns2:value>
+                    </ns2:name>
+                    <ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0002">
+                        <ns2:name>
+                            <ns2:value>Problem/Diagnosis name</ns2:value>
+                        </ns2:name>
+                        <ns2:value xsi:type="ns2:DV_CODED_TEXT">
+                            <ns2:value>myocardial infarction</ns2:value>
+                            <ns2:defining_code>
+                                <ns2:terminology_id>
+                                    <ns2:value>SNOMED-CT</ns2:value>
+                                </ns2:terminology_id>
+                                <ns2:code_string>22298006</ns2:code_string>
+                            </ns2:defining_code>
+                        </ns2:value>
+                    </ns2:items>
+                    <ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0077">
+                        <ns2:name>
+                            <ns2:value>Date/time of onset</ns2:value>
+                        </ns2:name>
+                        <ns2:value xsi:type="ns2:DV_DATE_TIME">
+                            <ns2:value>2010-09-10T00:00:00.000Z</ns2:value>
+                        </ns2:value>
+                    </ns2:items>
+                    <ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0003">
+                        <ns2:name>
+                            <ns2:value>Date/time clinically recognised</ns2:value>
+                        </ns2:name>
+                        <ns2:value xsi:type="ns2:DV_DATE_TIME">
+                            <ns2:value>2010-09-12T00:00:00.000Z</ns2:value>
+                        </ns2:value>
+                    </ns2:items>
+                </ns2:data>
+            </ns2:items>
+        </ns2:content>
+    </composition>

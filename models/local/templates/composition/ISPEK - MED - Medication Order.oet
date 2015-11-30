@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>6b0bf6ed-2f68-4160-8b1e-af6e44e8b507</id>
+  <name>ISPEK - MED - Medication Order</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose />
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.encounter.v1" concept_name="Encounter" name="Medication order">
+    <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.medication.v1" concept_name="Medication" max="1" path="/content" name="Medication detail">
+      <Item xsi:type="ACTION" archetype_id="openEHR-EHR-ACTION.medication.v1" concept_name="Medication action" path="/items[at0002]">
+        <Rule path="/description[at0017]/items[at0036]" max="0" />
+        <Rule path="/protocol[at0030]/items[at0026]" max="0" />
+        <Rule path="/protocol[at0030]/items[at0040]" max="0" />
+        <Rule path="/protocol[at0030]/items[at0031]" max="0" />
+        <Rule path="/protocol[at0030]/items[at0037]" max="0" />
+        <Rule path="/protocol[at0030]/items[at0032]" max="0" />
+        <Rule path="/protocol[at0030]/items[at0038]" max="0" />
+        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.chemical_description_mnd.v1" concept_name="Chemical description of medication" max="1" path="/description[at0017]/items[at0023]" name="Ingredients and form">
+          <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_amount.v1" concept_name="Medication amount" max="1" path="/items[at0030]" name="Medication strength">
+            <Rule path="/items[at0001]" name="Strength">
+              <constraint xsi:type="multipleConstraint">
+                <includedTypes>Quantity (Qualified real)</includedTypes>
+              </constraint>
+            </Rule>
+            <Rule path="/items[at0008]/items[at0001]">
+              <constraint xsi:type="multipleConstraint">
+                <includedTypes>Quantity (Qualified real)</includedTypes>
+              </constraint>
+            </Rule>
+            <Rule path="/items[at0007]/items[at0001]">
+              <constraint xsi:type="multipleConstraint">
+                <includedTypes>Quantity (Qualified real)</includedTypes>
+              </constraint>
+            </Rule>
+          </Items>
+          <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_amount.v1" concept_name="Medication amount" max="1" path="/items[at0001]/items[at0033]" name="Medication quantity">
+            <Rule path="/items[at0001]" name="Quantity">
+              <constraint xsi:type="multipleConstraint">
+                <includedTypes>Quantity (Qualified real)</includedTypes>
+              </constraint>
+            </Rule>
+            <Rule path="/items[at0008]/items[at0001]">
+              <constraint xsi:type="multipleConstraint">
+                <includedTypes>Quantity (Qualified real)</includedTypes>
+              </constraint>
+            </Rule>
+            <Rule path="/items[at0007]/items[at0001]">
+              <constraint xsi:type="multipleConstraint">
+                <includedTypes>Quantity (Qualified real)</includedTypes>
+              </constraint>
+            </Rule>
+          </Items>
+          <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_amount.v1" concept_name="Medication amount" max="1" path="/items[at0001]/items[at0024]" name="Medication quantity">
+            <Rule path="/items[at0001]" name="Quantity">
+              <constraint xsi:type="multipleConstraint">
+                <includedTypes>Quantity (Qualified real)</includedTypes>
+              </constraint>
+            </Rule>
+            <Rule path="/items[at0008]/items[at0001]">
+              <constraint xsi:type="multipleConstraint">
+                <includedTypes>Quantity (Qualified real)</includedTypes>
+              </constraint>
+            </Rule>
+            <Rule path="/items[at0007]/items[at0001]">
+              <constraint xsi:type="multipleConstraint">
+                <includedTypes>Quantity (Qualified real)</includedTypes>
+              </constraint>
+            </Rule>
+          </Items>
+        </Items>
+        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_amount.v1" concept_name="Medication amount" max="1" path="/description[at0017]/items[at0022]" name="Medication quantity">
+          <Rule path="/items[at0001]" name="Quantity">
+            <constraint xsi:type="multipleConstraint">
+              <includedTypes>Quantity (Qualified real)</includedTypes>
+            </constraint>
+          </Rule>
+          <Rule path="/items[at0008]/items[at0001]">
+            <constraint xsi:type="multipleConstraint">
+              <includedTypes>Quantity (Qualified real)</includedTypes>
+            </constraint>
+          </Rule>
+          <Rule path="/items[at0007]/items[at0001]">
+            <constraint xsi:type="multipleConstraint">
+              <includedTypes>Quantity (Qualified real)</includedTypes>
+            </constraint>
+          </Rule>
+        </Items>
+        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_admin.v1" concept_name="Medication administration" max="1" path="/description[at0017]/items[at0027]" name="Medicine administered">
+          <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.infusion_details.v1" concept_name="Infusion Administration Details" path="/items[at0005]" />
+        </Items>
+      </Item>
+    </Content>
+    <Context>
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.composition_context_detail.v1" concept_name="Context detail" path="/context/other_context[at0001]/items[at0002]" />
+    </Context>
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.encounter.v1">
+    <digest id="MD5-CAM-1.0.1">A3E06C6FC4299B12A2D3798D87F8E032</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.composition_context_detail.v1">
+    <digest id="MD5-CAM-1.0.1">8FF70388270C12D4D8FF6C6A20B7CAAE</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-SECTION.medication.v1">
+    <digest id="MD5-CAM-1.0.1">C11E87AF93737AA39BDDBEE40628DE3D</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-ACTION.medication.v1">
+    <digest id="MD5-CAM-1.0.1">35AE9CCC933120D4A5D0BC176436EB8C</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.chemical_description_mnd.v1">
+    <digest id="MD5-CAM-1.0.1">28794BDFBAD1EBFCE0B63978DA0E92AF</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.medication_amount.v1">
+    <digest id="MD5-CAM-1.0.1">2F70C9113B7CBAFBFFB4455B12FEEC14</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.medication_admin.v1">
+    <digest id="MD5-CAM-1.0.1">26998F8362E0AA57A9FCAE456E20F812</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.infusion_details.v1">
+    <digest id="MD5-CAM-1.0.1">174186FE770CA06D01DAF9596E410983</digest>
+  </integrity_checks>
+</template>

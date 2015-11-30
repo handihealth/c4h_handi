@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<composition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.openehr.org/v1" xsi:type="COMPOSITION" archetype_node_id="openEHR-EHR-COMPOSITION.referral.v0">
+        <name>
+            <value>Laboratory order</value>
+        </name>
+        <uid xsi:type="OBJECT_VERSION_ID">
+            <value>23d69330-7790-4394-8abc-1455681f6ffa::ydh.code4health.com::1</value>
+        </uid>
+        <archetype_details>
+            <archetype_id>
+                <value>openEHR-EHR-COMPOSITION.referral.v0</value>
+            </archetype_id>
+            <template_id>
+                <value>IDCR - Laboratory Order.v0</value>
+            </template_id>
+            <rm_version>1.0.1</rm_version>
+        </archetype_details>
+        <language>
+            <terminology_id>
+                <value>ISO_639-1</value>
+            </terminology_id>
+            <code_string>en</code_string>
+        </language>
+        <territory>
+            <terminology_id>
+                <value>ISO_3166-1</value>
+            </terminology_id>
+            <code_string>GB</code_string>
+        </territory>
+        <category>
+            <value>event</value>
+            <defining_code>
+                <terminology_id>
+                    <value>openehr</value>
+                </terminology_id>
+                <code_string>433</code_string>
+            </defining_code>
+        </category>
+        <composer xsi:type="PARTY_IDENTIFIED">
+            <name>Dr Joyce Smith</name>
+        </composer>
+        <context>
+            <start_time>
+                <value>2015-04-10T00:19:02.518+02:00</value>
+            </start_time>
+            <setting>
+                <value>other care</value>
+                <defining_code>
+                    <terminology_id>
+                        <value>openehr</value>
+                    </terminology_id>
+                    <code_string>238</code_string>
+                </defining_code>
+            </setting>
+            <health_care_facility>
+                <external_ref>
+                    <id xsi:type="GENERIC_ID">
+                        <value>999999-345</value>
+                        <scheme>2.16.840.1.113883.2.1.4.3</scheme>
+                    </id>
+                    <namespace>NHS-UK</namespace>
+                    <type>PARTY</type>
+                </external_ref>
+                <name>Northumbria Community NHS</name>
+            </health_care_facility>
+        </context>
+        <content xsi:type="INSTRUCTION" archetype_node_id="openEHR-EHR-INSTRUCTION.request-lab_test.v1">
+            <name>
+                <value>Laboratory Test request</value>
+            </name>
+            <uid xsi:type="HIER_OBJECT_ID">
+                <value>b8c17799-457d-4583-8d85-c369dffacc21</value>
+            </uid>
+            <archetype_details>
+                <archetype_id>
+                    <value>openEHR-EHR-INSTRUCTION.request-lab_test.v1</value>
+                </archetype_id>
+                <rm_version>1.0.1</rm_version>
+            </archetype_details>
+            <language>
+                <terminology_id>
+                    <value>ISO_639-1</value>
+                </terminology_id>
+                <code_string>en</code_string>
+            </language>
+            <encoding>
+                <terminology_id>
+                    <value>IANA_character-sets</value>
+                </terminology_id>
+                <code_string>UTF-8</code_string>
+            </encoding>
+            <subject xsi:type="PARTY_SELF"/>
+            <narrative>
+                <value>Urea, electrolytes and creatinine measurement</value>
+            </narrative>
+            <activities archetype_node_id="at0001">
+                <name>
+                    <value>Lab Request</value>
+                </name>
+                <description xsi:type="ITEM_TREE" archetype_node_id="at0009">
+                    <name>
+                        <value>Tree</value>
+                    </name>
+                    <items xsi:type="ELEMENT" archetype_node_id="at0121">
+                        <name>
+                            <value>Service requested</value>
+                        </name>
+                        <value xsi:type="DV_CODED_TEXT">
+                            <value>Urea, electrolytes and creatinine measurement</value>
+                            <defining_code>
+                                <terminology_id>
+                                    <value>SNOMED-CT</value>
+                                </terminology_id>
+                                <code_string>444164000</code_string>
+                            </defining_code>
+                        </value>
+                    </items>
+                </description>
+                <timing>
+                    <value>R5/2015-04-10T00:19:00+02:00/P2M</value>
+                    <formalism>timing</formalism>
+                </timing>
+                <action_archetype_id>/.*/</action_archetype_id>
+            </activities>
+        </content>
+        <content xsi:type="ACTION" archetype_node_id="openEHR-EHR-ACTION.laboratory_test.v1">
+            <name>
+                <value>Laboratory test tracker</value>
+            </name>
+            <archetype_details>
+                <archetype_id>
+                    <value>openEHR-EHR-ACTION.laboratory_test.v1</value>
+                </archetype_id>
+                <rm_version>1.0.1</rm_version>
+            </archetype_details>
+            <language>
+                <terminology_id>
+                    <value>ISO_639-1</value>
+                </terminology_id>
+                <code_string>en</code_string>
+            </language>
+            <encoding>
+                <terminology_id>
+                    <value>IANA_character-sets</value>
+                </terminology_id>
+                <code_string>UTF-8</code_string>
+            </encoding>
+            <subject xsi:type="PARTY_SELF"/>
+            <time>
+                <value>2015-04-10T00:19:02.518+02:00</value>
+            </time>
+            <description xsi:type="ITEM_TREE" archetype_node_id="at0001">
+                <name>
+                    <value>Tree</value>
+                </name>
+                <items xsi:type="ELEMENT" archetype_node_id="at0017">
+                    <name>
+                        <value>Test name</value>
+                    </name>
+                    <value xsi:type="DV_CODED_TEXT">
+                        <value>Urea, electrolytes and creatinine measurement</value>
+                        <defining_code>
+                            <terminology_id>
+                                <value>SNOMED-CT</value>
+                            </terminology_id>
+                            <code_string>444164000</code_string>
+                        </defining_code>
+                    </value>
+                </items>
+            </description>
+            <ism_transition>
+                <current_state>
+                    <value>planned</value>
+                    <defining_code>
+                        <terminology_id>
+                            <value>openehr</value>
+                        </terminology_id>
+                        <code_string>526</code_string>
+                    </defining_code>
+                </current_state>
+                <careflow_step>
+                    <value>Test requested</value>
+                    <defining_code>
+                        <terminology_id>
+                            <value>local</value>
+                        </terminology_id>
+                        <code_string>at0003</code_string>
+                    </defining_code>
+                </careflow_step>
+            </ism_transition>
+        </content>
+    </composition>

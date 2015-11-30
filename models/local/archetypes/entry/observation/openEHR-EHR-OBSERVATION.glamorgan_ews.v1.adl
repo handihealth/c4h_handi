@@ -1,0 +1,100 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.glamorgan_ews.v1
+
+concept
+	[at0000]	-- Glamorgan ews
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"HANDIHealth,UK">
+		["email"] = <"ian@handihealth.org">
+		["date"] = <"2014-12-10">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"Initial">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"18FA4182D215B7B285E671AC1ED26B11">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Glamorgan ews
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Temperture
+										value matches {1|[local::at0005]}		-- Less thn 37 deg
+									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {	-- Cloma
+										value matches {
+											C_DV_ORDINAL <
+											>
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {	-- New element
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Glamorgan ews">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Temperture">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"Less thn 37 deg">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Cloma">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"New element">
+					description = <"*">
+				>
+			>
+		>
+	>

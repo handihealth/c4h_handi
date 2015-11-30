@@ -1,0 +1,90 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-CLUSTER.context_detail.v1
+
+concept
+	[at0000]	-- Context detail
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			author = <
+				["organisation"] = <"Marand d.o.o., Ljubljana Slovenija">
+				["name"] = <"mag. Biljana Prinčič">
+				["email"] = <"biljana.princic@marand.si">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Dr Ian McNicoll">
+		["organisation"] = <"Ocean Informatics, United Kingdom">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["date"] = <"01/12/2010">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record common extended contextual details that apply to all COMPOSITION archetypes wthin a specific application or care setting">
+			use = <"">
+			keywords = <"composition", "context">
+			misuse = <"">
+			copyright = <"">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"Za zapisovanje podatkov, ki se nanašajo na vse COMPOSITION archetypes
+
+">
+			use = <"">
+			keywords = <"composition", "context", "vsebina">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"2AF1D13513ED24715942283C4B0B67A4">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Context detail
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0008] occurrences matches {1..*} matches {	-- Tags
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Context detail">
+					description = <"Additional contextual detail to be applied to all compositions.">
+				>
+				["at0008"] = <
+					comment = <"Tags applied to the composition. They can contain various ids, such as episode id, central case id or other types of information forming composition meta-data.">
+					text = <"Tags">
+					description = <"*">
+				>
+			>
+		>
+		["sl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Podrobnosti">
+					description = <"Dodatni podatki o kontekstu">
+				>
+				["at0008"] = <
+					comment = <"*Tags applied to the composition. They can contain various ids, such as episode id, central case id or other types of information forming composition meta-data.(en)">
+					text = <"Tagi">
+					description = <"*">
+				>
+			>
+		>
+	>

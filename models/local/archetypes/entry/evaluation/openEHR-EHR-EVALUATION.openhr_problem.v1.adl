@@ -1,0 +1,223 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-EVALUATION.openhr_problem.v1
+
+concept
+	[at0000]	-- Openhr problem
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"HANDIHealth,UK">
+		["email"] = <"ian@handihealth.org">
+		["date"] = <"2015-04-28">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"6290DDE8F23B477D21EA870C4EE40AB1">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Openhr problem
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0003] occurrences matches {0..1} matches {	-- Expected end date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {	-- Expected duration
+						value matches {
+							DV_DURATION matches {
+								value matches {PYMWD/|>=P0D|}
+							}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Status
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0007, 	-- Active problem
+									at0008, 	-- Inactive problem
+									at0009, 	-- Health promotion
+									at0010]	-- Potential problem
+								}
+							}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Significance
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0011, 	-- Significant
+									at0012]	-- Not significant (Minor)
+								}
+							}
+						}
+					}
+					ELEMENT[at0013] occurrences matches {0..1} matches {	-- Owner type
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0014, 	-- Individual
+									at0015, 	-- Family
+									at0016]	-- Community
+								}
+							}
+						}
+					}
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Problem link
+						value matches {
+							DV_URI matches {*}
+						}
+					}
+					ELEMENT[at0020] occurrences matches {0..1} matches {	-- Relationship type
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0021, 	-- Combining
+									at0022, 	-- Replacing
+									at0023, 	-- Grouping
+									at0024]	-- Evolution
+								}
+							}
+						}
+					}
+					ELEMENT[at0017] occurrences matches {0..1} matches {	-- Link type
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0018, 	-- Associated
+									at0019]	-- Episode Follow-on
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Openhr problem">
+					description = <"Representation of a problem episode structure aligned with the openHR model.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Problem link">
+					description = <"The link to the original problem event.">
+				>
+				["at0003"] = <
+					text = <"Expected end date">
+					description = <"The expected end date of the problem episode.">
+				>
+				["at0004"] = <
+					text = <"Status">
+					description = <"The status of the problem.">
+				>
+				["at0005"] = <
+					text = <"Significance">
+					description = <"The significance of the problem.">
+				>
+				["at0006"] = <
+					text = <"Expected duration">
+					description = <"The expected end date of the problem episode.">
+				>
+				["at0007"] = <
+					text = <"Active problem">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"Inactive problem">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"Health promotion">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"Potential problem">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"Significant">
+					description = <"*">
+				>
+				["at0012"] = <
+					text = <"Not significant (Minor)">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"Owner type">
+					description = <"The type of owner.">
+				>
+				["at0014"] = <
+					text = <"Individual">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"Family">
+					description = <"*">
+				>
+				["at0016"] = <
+					text = <"Community">
+					description = <"*">
+				>
+				["at0017"] = <
+					text = <"Link type">
+					description = <"The nature of the link back to the original problem event.">
+				>
+				["at0018"] = <
+					text = <"Associated">
+					description = <"*">
+				>
+				["at0019"] = <
+					text = <"Episode Follow-on">
+					description = <"*">
+				>
+				["at0020"] = <
+					text = <"Relationship type">
+					description = <"The nature of the relationship between a group of problem events.">
+				>
+				["at0021"] = <
+					text = <"Combining">
+					description = <"*">
+				>
+				["at0022"] = <
+					text = <"Replacing">
+					description = <"*">
+				>
+				["at0023"] = <
+					text = <"Grouping">
+					description = <"*">
+				>
+				["at0024"] = <
+					text = <"Evolution">
+					description = <"*">
+				>
+			>
+		>
+	>

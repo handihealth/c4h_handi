@@ -1,0 +1,186 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-ACTION.notification_uk.v1
+
+concept
+	[at0000]	-- Neges
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["cy"] = <
+			language = <[ISO_639-1::cy]>
+			author = <
+				["organisation"] = <"sss">
+				["name"] = <"ssssss">
+				["email"] = <"sssss">
+			>
+		>
+		["cy-gb"] = <
+			language = <[ISO_639-1::cy-gb]>
+			author = <
+				["name"] = <"Gareth Morlais">
+				["email"] = <"melynmelyn@gmail.com">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"HANDIHealth,UK">
+		["email"] = <"ian@handihealth.org">
+		["date"] = <"2015-01-24">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+		["cy-gb"] = <
+			language = <[ISO_639-1::cy-gb]>
+			purpose = <"*(en)">
+			use = <"*(en)">
+			misuse = <"*(en)">
+			copyright = <"*(en)">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"8D885AA24160180B998957F1C38A149E">
+	>
+
+definition
+	ACTION[at0000] matches {	-- Neges
+		description matches {
+			ITEM_TREE[at0001] matches {	-- *Tree(en)
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Neges
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0007, 	-- Wedi mynychu
+									at0008, 	-- Wedi cysylltu
+									at0009]	-- Canlyniad labordy ar gael
+								}
+							}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {	-- Cyfeirnod Iechyd
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Enw'r claf
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Sylw
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {	-- Dolen at ddigwyddiad
+						value matches {
+							DV_URI matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Notification">
+					description = <"Generic notification event.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Notification">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"NHS number">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"Note">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"Patient name">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Event Link">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"Attended">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"Contacted">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"Lab result reported">
+					description = <"*">
+				>
+			>
+		>
+		["cy-gb"] = <
+			items = <
+				["at0000"] = <
+					text = <"Neges">
+					description = <"*Generic notification event.(en)">
+				>
+				["at0001"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"Neges">
+					description = <"**(en)">
+				>
+				["at0003"] = <
+					text = <"Cyfeirnod Iechyd">
+					description = <"**(en)">
+				>
+				["at0004"] = <
+					text = <"Sylw">
+					description = <"ddddd">
+				>
+				["at0005"] = <
+					text = <"Enw'r claf">
+					description = <"**(en)">
+				>
+				["at0006"] = <
+					text = <"Dolen at ddigwyddiad">
+					description = <"**(en)">
+				>
+				["at0007"] = <
+					text = <"Wedi mynychu">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"Wedi cysylltu">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"Canlyniad labordy ar gael">
+					description = <"*">
+				>
+			>
+		>
+	>
